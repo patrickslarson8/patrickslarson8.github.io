@@ -10,3 +10,27 @@ body {
     background-color: var(--colorbackground);
     color: var(--colortext);
 }
+
+.intro {
+  background-color: var(--color3);
+  border-color: var(--color3);
+  border-width: 5px;
+  border-radius: 30px;
+  height:100vw;
+  max-height: 100vh;
+}
+
+
+.social-media a {
+  text-decoration: none;
+  color: var(--color5)
+}
+
+#nav-list {
+  color: var(--colortext)
+}
+
+/*??*/
+#sm-div {
+  color:var(--color5);
+}
