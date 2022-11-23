@@ -4,6 +4,7 @@
     --color3: #606c38;
     --color4: #dda15e;
     --color5: #bc6c25;
+    --min-width: 300px;
   }
 
 body {
@@ -16,21 +17,34 @@ body {
   border-color: var(--color3);
   border-width: 5px;
   border-radius: 30px;
+  min-width: var(--min-width);
   height:100vw;
   max-height: 100vh;
+  padding-top:30vh;
+
 }
 
 
 .social-media a {
   text-decoration: none;
-  color: var(--color5)
+  color: var(--color5);
+  
 }
 
-#nav-list {
-  color: var(--colortext)
-}
-
-/*??*/
 #sm-div {
   color:var(--color5);
+  height: inherit;
+  width: inherit;
+  height:40px;
+  min-width: var(--min-width);
+  outline: var(--color4);
+  outline-style: dashed;
+  border-width: 3px;;
+}
+
+.nav {
+  color: var(--colortext);
+  position: -webkit-sticky; /* Safari */
+  position:sticky;
+  top:0;
 }
