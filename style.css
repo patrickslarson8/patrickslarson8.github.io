@@ -1,6 +1,6 @@
 :root {
-    --colorbackground: #fefae0;
-    --colortext: #283618;
+    --color1: #fefae0;
+    --color2: #283618;
     --color3: #606c38;
     --color4: #dda15e;
     --color5: #bc6c25;
@@ -8,8 +8,8 @@
   }
 
 body {
-    background-color: var(--colorbackground);
-    color: var(--colortext);
+    background-color: var(----color1);
+    color: var(--color2);
 }
 
 .intro {
@@ -70,8 +70,87 @@ body {
   top:0;
   z-index: 1;
 }
-.nav {
-  color: var(--colortext);
-  position: -webkit-sticky; /* Safari */
-  position:sticky;
+navbar {
+  /*color: var(--colortext);
+  position: -webkit-sticky; /* Safari
+  position:sticky;*/
+  display:flex;
+  width: 550px;
+  position: absolute;
+  top: 400px;
+  display:flex;
+  align-items: center;
+  border-radius: 10px;
+  background-color: var(--color2);
+  border-radius: 10px;
+}
+
+navbar ul {
+  display:flex;
+}
+
+navbar ul li {
+  position: relative;
+  list-style: none;
+  width:100px;
+  z-index: 1;
+}
+
+navbar ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 500;
+  color:var(--color4);
+}
+
+navbar ul li a .icon {
+  position: relative;
+  display:block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition:0.3s;
+}
+
+navbar ul li.active a .icon {
+  transform: translateY(-35px)
+}
+
+navbar ul li a .nav-text {
+  position:absolute;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  opacity:0;
+  transform:translateY(20px);
+}
+
+navbar ul li.active a .nav-text {
+  opacity:1;
+  transform: translateY(10px);
+}
+
+.nav-marker {
+  position:absolute;
+  top:-50%;
+  border-radius: 50%;
+  border: 6px solid var(--color3);
+  width:70px;
+  height: 70px;
+  background-color: var(--color5);
+  transition: 0.5s;
+}
+
+.nav-marker::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 var(--color2);
 }
