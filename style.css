@@ -27,23 +27,31 @@ body {
 .left-block {
   margin:auto;
   text-align: center;
+  width:30vw;
+  height:30vh;
 }
 
 .headline {
-  background-color: #dda15e;
+  color: #dda15e;
   font-variant: small-caps;
+  text-align: left;
+  font-size: 36pt;
+  margin-bottom: 10px;
 }
 
 #sm-div {
   color:var(--color5);
   outline: var(--color4);
-  outline-style: dashed;
-  border-width: 3px;
   margin:auto;
+  text-align: left;
 }
 
 .social-media a {
   text-decoration: none;
+  color: var(--color4);
+  transition: all .3s;
+}
+.social-media a:hover {
   color: var(--color5);
 }
 
