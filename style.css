@@ -5,6 +5,7 @@
     --color4: #dda15e;
     --color5: #bc6c25;
     --min-width: 300px;
+    --transition-width: 500px;
   }
 
 body {
@@ -23,6 +24,7 @@ body {
   z-index: 0;
 }
 
+/* portion to left of portrait*/
 .left-block {
   margin:auto;
   text-align: center;
@@ -38,6 +40,7 @@ body {
   margin-bottom: 10px;
 }
 
+/* icons below headline*/
 #sm-div {
   color:var(--color5);
   outline: var(--color4);
@@ -69,19 +72,22 @@ body {
   top:0;
   z-index: 1;
 }
+
+/* nav at bottom */
 navbar {
   /*color: var(--colortext);
   position: -webkit-sticky; /* Safari
+  width: 50%;
   position:sticky;*/
+  width:465px;
   display:flex;
-  width: 550px;
   position: absolute;
-  top: 20px;
+  bottom: 10px;
+  left:23vw;
   display:flex;
   align-items: center;
-  border-radius: 10px;
   background-color: var(--color2);
-  border-radius: 10px;
+  border-radius: 25px;
 }
 
 navbar ul {
@@ -101,21 +107,20 @@ navbar ul li a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-weight: 500;
   color:var(--color4);
 }
 
 navbar ul li a .icon {
-  position: relative;
-  display:block;
+  /*position: relative;
+  display:block;*/
   line-height: 75px;
-  font-size: 1.5em;
+  font-size: 1.6em;
   text-align: center;
   transition:0.3s;
 }
 
 navbar ul li.active a .icon {
-  transform: translateY(-46px)
+  transform: translateY(-47px)
 }
 
 navbar ul li a .nav-text {
@@ -124,6 +129,7 @@ navbar ul li a .nav-text {
   transition: 0.5s;
   opacity:0;
   transform:translateY(20px);
+  font-size: 1.3em;
 }
 
 navbar ul li.active a .nav-text {
@@ -131,11 +137,12 @@ navbar ul li.active a .nav-text {
   transform: translateY(15px);
 }
 
-.nav-marker {
-  position:absolute;
-  left:50px;
-  top:-35%;
+#nav-marker {
+  position:relative;
+  left:-392px;
+  top:-65%;
   border-radius: 50%;
+  border-top-right-radius: 20px;
   border: 6px solid var(--color3);
   width:70px;
   height: 70px;
@@ -143,26 +150,26 @@ navbar ul li.active a .nav-text {
   transition: 0.5s;
 }
 
-.nav-marker::before {
+#nav-marker::before {
   content: '';
   position: absolute;
-  top: 45%;
-  left: -23px;
+  top: 31px;
+  left: -24px;
   width: 20px;
   height: 20px;
   background: transparent;
-  border-top-right-radius: 50px;
+  border-top-right-radius: 16px;
   box-shadow: 0px -10px 0 0 var(--color3);
 }
 
-.nav-marker::after {
+#nav-marker::after {
   content: '';
-  position: absolute;
-  top: 45%;
-  left: 73px;
+  position:absolute;
+  top: 31px;
+  left: 74px;
   width: 20px;
   height: 20px;
   background: transparent;
-  border-top-left-radius: 50px;
+  border-top-left-radius: 16px;
   box-shadow: 0px -10px 0 0 var(--color3);
 }
