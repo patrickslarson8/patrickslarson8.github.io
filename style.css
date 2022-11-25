@@ -1,5 +1,5 @@
 :root {
-    --color1: #fefae0;
+    --color1: #faf2c1;
     --color2: #283618;
     --color3: #606c38;
     --color4: #dda15e;
@@ -8,8 +8,7 @@
   }
 
 body {
-    background-color: var(----color1);
-    color: var(--color2);
+    background-color: var(--color1);
 }
 
 .intro {
@@ -77,7 +76,7 @@ navbar {
   display:flex;
   width: 550px;
   position: absolute;
-  top: 400px;
+  top: 20px;
   display:flex;
   align-items: center;
   border-radius: 10px;
