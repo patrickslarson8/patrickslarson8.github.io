@@ -16,7 +16,7 @@ body {
     overflow-x: hidden;
 }
 
-.intro {
+#intro {
   background-color: var(--color3);
   position:relative;
   width:100vw;
@@ -64,19 +64,29 @@ body {
   border-radius: 50%;
   border-top-right-radius: 20%;
   margin:auto;
-  z-index:20;
-}
-.right-stripe {
-  background-color: var(--color4);
-  height:100%;
-  width:5%;
-  position:absolute;
-  right:15%;
-  top:0;
-  z-index: 1;
 }
 
 /* nav on right side */
+#right-stripe {
+  background-color: var(--color4);
+  height:100%;
+  width:5%;
+  position:fixed;
+  right:15%;
+  top:0;
+  z-index: -2;
+}
+
+#right-stripe2 {
+  background-color: var(--color3);
+  height:100%;
+  width:15%;
+  position:fixed;
+  right:0%;
+  top:0;
+  z-index:-1;
+}
+
 navbar {
   position:fixed;
   bottom:10px;
