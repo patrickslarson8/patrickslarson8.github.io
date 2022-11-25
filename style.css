@@ -76,11 +76,11 @@ body {
   z-index: 1;
 }
 
-/* nav at bottom */
+/* nav on right side */
 navbar {
   position:fixed;
   bottom:10px;
-  left:23vw;
+  right:3vw;
   width: var(--navbar-width);
   display:flex;
   align-items: center;
@@ -110,28 +110,27 @@ navbar ul li a .icon {
   line-height: 60px;
   font-size: 1.6em;
   text-align: center;
-
 }
 
-navbar span {
-  transition:1s;
+#about-icon{
+  position: relative;
+  left:3px;
 }
 
-.active {
+#nav-marker {
+  position:absolute;
+  top: 14px;
+  left:4px;
+  width:37px;
+  height: 37px;
   border-radius: 50%;
   border-top-right-radius: 5px;
   border: 12px solid var(--color5);
   outline: 6px solid var(--color3);
   background-color: var(--color5);
+  visibility: hidden;
+  transition: 1s;
 }
-
-.idle {
-  border:0px;
-  outline:0px;
-  transition:3s;
-  background-color: transparent;
-}
-
 
 #projects-section {
   height: 100vh;

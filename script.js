@@ -3,20 +3,10 @@ var about = document.getElementById("about-nav");
 var background = document.getElementById("background-nav");
 var projects = document.getElementById("projects-nav");
 
-function removeActive() {
-    const list = document.getElementById("nav-list").getElementsByTagName("span");
-    for (var i=0, len=list.length; i<len; i++) {
-        list[ i ].classList.remove("active");
-    }
-}
+var marker_style = document.getElementById("nav-marker").style;
+marker_style.visibility = "visible";
 
-function makeActive(name) {
-    var element = document.getElementById(name);
-    removeActive();
-    element.classList.add("active");
-}
-
-home.onclick = function() {makeActive("home-nav");}
-about.onclick = function() {makeActive("about-nav");}
-background.onclick = function() {makeActive("background-nav");}
-projects.onclick = function() {makeActive("projects-nav");}
+home.onclick = function() {marker_style.top = "15px"}
+projects.onclick = function() {marker_style.top = "74px"}
+about.onclick = function() {marker_style.top = "135px"}
+background.onclick = function() {marker_style.top = "193px"}
