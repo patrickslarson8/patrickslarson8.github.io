@@ -10,15 +10,16 @@
 
 body {
     background-color: var(--color1);
+    margin:0px;
+    overflow-x: hidden;
 }
 
 .intro {
   background-color: var(--color3);
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
+  position:relative;
+  width:100vw;
+  height:100vh;
+  box-sizing: border-box;
   min-width: var(--min-width);
   display:flex;
   z-index: 0;
@@ -75,19 +76,19 @@ body {
 
 /* nav at bottom */
 navbar {
-  /*color: var(--colortext);
+  /*
   position: -webkit-sticky; /* Safari
   width: 50%;
   position:sticky;*/
-  width:465px;
-  display:flex;
-  position: absolute;
-  bottom: 10px;
+  position:fixed;
+  bottom:10px;
   left:23vw;
+  width:465px;
   display:flex;
   align-items: center;
   background-color: var(--color2);
   border-radius: 25px;
+  z-index: 5000;
 }
 
 navbar ul {
@@ -172,4 +173,20 @@ navbar ul li.active a .nav-text {
   background: transparent;
   border-top-left-radius: 16px;
   box-shadow: 0px -10px 0 0 var(--color3);
+}
+
+#projects-section {
+  height: 100vh;
+}
+
+#about-section {
+  position:relative;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--color3);
+}
+
+#background-section {
+  position: relative;
 }
