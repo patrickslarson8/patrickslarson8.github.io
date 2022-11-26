@@ -150,35 +150,29 @@ navbar ul li a .icon {
 
 #projects-section {
   height: 100vh;
+  position:relative;
+  left: 1%;
+  width: 80vw;
+  text-align: center;
 }
 
-.row {
-  margin: 8px -16px;
+#project-btn-div {
+  margin: 30px;
 }
 
-/* Add padding BETWEEN each column (if you want) */
-.row,
-.row > .column {
-  padding: 8px;
+#project-btn-div button {
+  color: var(--color1);
+  background-color: var(--color5);
+  border-color: var(--color4);
+  border-radius:10px;
+  border-top-right-radius: 5px;
 }
 
-/* Create three equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 33.33%;
-  display: ; /* Hide columns by default */
-}
-
-/* Clear floats after rows */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
 .content {
-  padding: 10px;
+  float: left;
+  width: 15vw;
+  min-width: 100px;
+  min-height: 300px;
 }
 
 
