@@ -8,6 +8,12 @@
     --transition-width: 500px;
 
     --navbar-width: 70px;
+    --navbar-offset:3vw;
+    --accent-stripe-width: 3vw;
+    --navbar-gutter-size: calc(var(--navbar-offset)*2 + var(--navbar-width));
+    --total-gutter-size: calc(var(--navbar-offset)*2 
+                          + var(--navbar-width) 
+                          + var(--accent-stripe-width));
   }
 
 html {
@@ -72,21 +78,21 @@ body {
 
 /* nav on right side */
 #right-stripe {
-  background-color: var(--color4);
+  background-color: var(--color3);
   height:100%;
-  width:5%;
+  width: calc(var(--navbar-width) + var(--navbar-offset)*2);
   position:fixed;
-  right:15%;
+  right:0px;
   top:0;
   z-index: -2;
 }
 
 #right-stripe2 {
-  background-color: var(--color3);
+  background-color: var(--color4);
   height:100%;
-  width:15%;
+  width: var(--accent-stripe-width);
   position:fixed;
-  right:0%;
+  right: calc(var(--navbar-offset)*2 + var(--navbar-width));
   top:0;
   z-index:-1;
 }
@@ -94,7 +100,7 @@ body {
 navbar {
   position:fixed;
   bottom:10px;
-  right:3vw;
+  right: var(--navbar-offset);
   width: var(--navbar-width);
   display:flex;
   align-items: center;
@@ -149,12 +155,14 @@ navbar ul li a .icon {
 /*What I'm proud of section*/
 
 #projects-section {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   position:relative;
-  left: 1%;
-  width: 80vw;
+  margin-right: var(--total-gutter-size);
   text-align: center;
-  padding:2.3vw;
+  padding:2vw;
 }
 
 #project-btn-div {
@@ -178,6 +186,14 @@ navbar ul li a .icon {
 .btn-active {
   background-color: var(--color5);
   color: var(--color1);
+}
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .content {
