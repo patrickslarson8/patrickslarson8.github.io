@@ -80,7 +80,7 @@ body {
 #right-stripe {
   background-color: var(--color3);
   height:100%;
-  width: calc(var(--navbar-width) + var(--navbar-offset)*2);
+  width: var(--navbar-gutter-size);
   position:fixed;
   right:0px;
   top:0;
@@ -152,10 +152,13 @@ navbar ul li a .icon {
   transition: 1s;
 }
 
+
+
 /*What I'm proud of section*/
 
 #projects-section {
   box-sizing: border-box;
+  margin:none;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -163,6 +166,8 @@ navbar ul li a .icon {
   margin-right: var(--total-gutter-size);
   text-align: center;
   padding:2vw;
+  border-bottom-right-radius: 2vw;
+  background-color: var(--color1);
 }
 
 #project-btn-div {
@@ -190,14 +195,15 @@ navbar ul li a .icon {
 
 .grid {
   display: flex;
-  flex-direction: row;
+  height: 100%;
+  overflow-y: auto;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
+  transition: 1s;
 }
 
 .content {
-  float: left;
   width: 15vw;
   width: 200px;
   height: 200px;
@@ -219,10 +225,52 @@ navbar ul li a .icon {
 
 #about-section {
   position:relative;
-  width: 100%;
+  left: 0;
+  width: calc(100% - var(--navbar-gutter-size));
   height: 100vh;
+}
+
+#about-top-stripe {
+  position: relative;
+  top:0;
+  left:0;
+  width: 100%;
+  height: var(--accent-stripe-width);
+  border-bottom-right-radius: 50vw;
+  background-color: var(--color4);
+
+}
+
+#about-left-stripe {
+  position: relative;
+  top:0px;
+  left:0px;
+  width: var(--accent-stripe-width);
+  height: 100vh;
+  background-color: var(--color4);
+  float:left;
+}
+
+#about-bottom-stripe {
+  position: relative;
+  bottom:0;
+  left:0;
+  width: 100%;
+  height: var(--accent-stripe-width);
+  border-bottom-right-radius: 50vw;
+  background-color: var(--color4);
+  margin:0px;
   box-sizing: border-box;
+}
+
+#about-content {
+  position: relative;
+  top:0px;
+  left:0px;
+  width:calc(100% - var(--total-gutter-size));
+  height:100vh;
   background-color: var(--color3);
+  box-sizing: border-box;
 }
 
 #background-section {
