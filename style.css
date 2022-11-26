@@ -161,13 +161,24 @@ navbar ul li a .icon {
   margin: 30px;
 }
 
-#project-btn-div button {
+.btn {
   color: var(--color2);
   background-color: var(--color4);
   border-color: var(--color2);
   border-radius:15px;
   border-top-right-radius: 5px;
   font-size: 1.6em;
+  transition: 1s;
+}
+
+.btn:hover {
+  background-color: var(--color5);
+  color: var(--color1);
+}
+
+.btn-active {
+  background-color: var(--color5);
+  color: var(--color1);
 }
 
 .content {
@@ -179,12 +190,16 @@ navbar ul li a .icon {
   border-radius: 55px;
   border-top-right-radius: 15px;
   margin: 10px;
-  transition: .3s;
+  transition: all .3s;
   border:3px solid var(--color4);
 }
 
 .content:hover {
-  outline:13px solid var(--color3);
+  outline:5px solid var(--color3);
+}
+
+.content-active {
+  outline:5px solid var(--color3);
 }
 
 #about-section {
