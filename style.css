@@ -154,6 +154,7 @@ navbar ul li a .icon {
   left: 1%;
   width: 80vw;
   text-align: center;
+  padding:2.3vw;
 }
 
 #project-btn-div {
@@ -161,20 +162,30 @@ navbar ul li a .icon {
 }
 
 #project-btn-div button {
-  color: var(--color1);
-  background-color: var(--color5);
-  border-color: var(--color4);
-  border-radius:10px;
+  color: var(--color2);
+  background-color: var(--color4);
+  border-color: var(--color2);
+  border-radius:15px;
   border-top-right-radius: 5px;
+  font-size: 1.6em;
 }
 
 .content {
   float: left;
   width: 15vw;
   min-width: 100px;
-  min-height: 300px;
+  min-height: 200px;
+  background-color: var(--color5);
+  border-radius: 55px;
+  border-top-right-radius: 15px;
+  margin: 10px;
+  transition: .3s;
+  border:3px solid var(--color4);
 }
 
+.content:hover {
+  outline:13px solid var(--color3);
+}
 
 #about-section {
   position:relative;
