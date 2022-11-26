@@ -1,5 +1,5 @@
 :root {
-    --color1: #faf2c1;
+    --color1: #faf6da;
     --color2: #283618;
     --color3: #606c38;
     --color4: #dda15e;
@@ -173,7 +173,6 @@ navbar ul li a .icon {
 
 .btn:hover {
   background-color: var(--color5);
-  color: var(--color1);
 }
 
 .btn-active {
@@ -184,10 +183,10 @@ navbar ul li a .icon {
 .content {
   float: left;
   width: 15vw;
-  min-width: 100px;
-  min-height: 200px;
+  width: 200px;
+  height: 200px;
   background-color: var(--color5);
-  border-radius: 55px;
+  border-radius: 50%;
   border-top-right-radius: 15px;
   margin: 10px;
   transition: all .3s;
@@ -195,7 +194,7 @@ navbar ul li a .icon {
 }
 
 .content:hover {
-  outline:5px solid var(--color3);
+  background-color: var(--color4);
 }
 
 .content-active {
