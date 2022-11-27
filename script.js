@@ -1,15 +1,5 @@
-var home = document.getElementById("home-nav");
-var about = document.getElementById("about-nav");
-var background = document.getElementById("background-nav");
-var projects = document.getElementById("projects-nav");
-
 var marker_style = document.getElementById("nav-marker").style;
 marker_style.visibility = "visible";
-
-home.onclick = function() {marker_style.top = "15px"}
-projects.onclick = function() {marker_style.top = "74px"}
-about.onclick = function() {marker_style.top = "135px"}
-background.onclick = function() {marker_style.top = "193px"}
 
 var csharpbtn = document.getElementById("csharpbtn")
 var cppbtn = document.getElementById("cppbtn")
@@ -45,3 +35,26 @@ function filterSelection(event, term) {
         }
     }
 }
+
+// Make navbar follow along with scroll
+const options = {threshold:0.5};
+
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const intersecting = entry.isIntersecting
+      switch (entry.target.id)
+      {
+        case "intro": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "15px";} break;
+        case "projects-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "74px";} break;
+        case "about-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "135px";} break;
+        case "background-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "193px";} break;
+        default:
+      }
+    })
+  }, options);
+
+observer.observe(document.getElementById("intro"));
+observer.observe(document.getElementById("projects-section"));
+observer.observe(document.getElementById("about-section"));
+observer.observe(document.getElementById("background-section"));
