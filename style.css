@@ -37,7 +37,6 @@ body {
   z-index: 0;
   border-top: 1vh solid var(--color4);
   border-bottom: 1vh solid var(--color4);
-  border-radius: 10vh;
 }
 
 /* portion to left of portrait*/
@@ -165,19 +164,6 @@ navbar ul li a .icon {
 
 /*What I'm proud of section*/
 
-#projects-section {
-  box-sizing: border-box;
-  margin:none;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  position:relative;
-  margin-right: var(--total-gutter-size);
-  text-align: center;
-  padding:2vw;
-  border-bottom-right-radius: 2vw;
-  background-color: var(--color1);
-}
 
 #project-btn-div {
   margin: 30px;
@@ -232,25 +218,7 @@ navbar ul li a .icon {
   outline:5px solid var(--color3);
 }
 
-#about-section {
-  position:relative;
-  left: 0;
-  width: calc(100% - var(--navbar-gutter-size));
-  height: 100vh;
-}
-
-
-
-#about-section h2 {
-  width: 100%;
-  height: 10vw;
-  line-height: 10vw;
-  max-width: 1000px;
-  margin:auto;
-  font-size: 3em;
-  color: var(--color4)
-}
-.about-me-container {
+.container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -259,39 +227,12 @@ navbar ul li a .icon {
   padding: 3px;
 }
 
-
-.about-me-content {
-  text-align: left;
-  background-color: var(--color5);
-  border: 6px solid var(--color4);
-  border-radius: 3vw;
-  width: 45%;
-  min-width: 340px;
-}
 
 .about-me-subheader {
   text-align: center;
 } 
 
-#background-section {
-  top:0px;
-  left:0px;
-  width:calc(100% - var(--total-gutter-size));
-  height:100vh;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.background-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
-  flex-wrap: wrap;
-  padding: 3px;
-}
-
-.background-content {
+.content-cell {
   text-align: left;
   background-color: var(--color5);
   border: 6px solid var(--color4);
@@ -300,17 +241,37 @@ navbar ul li a .icon {
   min-width: 340px;
 }
 
-
-.card-section {
-  top:0px;
-  left:0px;
-  width:calc(100% - var(--total-gutter-size));
-  height:99.4vh;
-  background-color: var(--color3);
+.dark-section {
   box-sizing: border-box;
+  width:calc(100% - var(--total-gutter-size));
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  background-color: var(--color3);
   border-top: 1vh solid var(--color4);
   border-bottom: 1vh solid var(--color4);
-  border-top-left-radius: 10vh;
-  border-bottom-left-radius: 10vh;
+}
+
+.light-section {
+  box-sizing: border-box;
+  width:calc(100% - var(--total-gutter-size));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--color1);
+  border-top: 1vh solid var(--color5);
+  border-bottom: 1vh solid var(--color5);
+}
+
+h2 {
+  height: 10vw;
+  line-height: 10vw;
+  font-size: 3em;
+  color: var(--color4);
+  background-color: var(--color3);
+  border-radius: 10vh;
+  border-top-right-radius: 2vh;
+  outline: 6px solid var(--color4);
 }
