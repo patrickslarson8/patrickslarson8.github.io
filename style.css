@@ -29,12 +29,15 @@ body {
 #intro {
   background-color: var(--color3);
   position:relative;
-  width:100vw;
-  min-height:100vh;
+  width: 100%;
+  min-height:99.4vh;
   box-sizing: border-box;
   min-width: var(--min-width);
   display:flex;
   z-index: 0;
+  border-top: 1vh solid var(--color4);
+  border-bottom: 1vh solid var(--color4);
+  border-radius: 10vh;
 }
 
 /* portion to left of portrait*/
@@ -43,6 +46,7 @@ body {
   text-align: center;
   width:30vw;
   height:30vh;
+  
 }
 
 .headline {
@@ -230,47 +234,18 @@ navbar ul li a .icon {
   height: 100vh;
 }
 
-#about-top-stripe {
-  position: relative;
-  top:0;
-  left:0;
-  width: 100%;
-  height: var(--accent-stripe-width);
-  border-bottom-right-radius: 50vw;
-  background-color: var(--color4);
-
-}
-
-#about-left-stripe {
-  position: relative;
-  top:0px;
-  left:0px;
-  width: var(--accent-stripe-width);
-  height: 100vh;
-  background-color: var(--color4);
-  float:left;
-}
-
-#about-bottom-stripe {
-  position: relative;
-  bottom:0;
-  left:0;
-  width: 100%;
-  height: var(--accent-stripe-width);
-  border-bottom-right-radius: 50vw;
-  background-color: var(--color4);
-  margin:0px;
-  box-sizing: border-box;
-}
-
 #about-section {
   top:0px;
   left:0px;
   width:calc(100% - var(--total-gutter-size));
-  height:100vh;
+  height:99.4vh;
   background-color: var(--color3);
   box-sizing: border-box;
   text-align: center;
+  border-top: 1vh solid var(--color4);
+  border-bottom: 1vh solid var(--color4);
+  border-top-left-radius: 10vh;
+  border-bottom-left-radius: 10vh;
 }
 
 #about-section h2 {
@@ -306,5 +281,28 @@ navbar ul li a .icon {
 } 
 
 #background-section {
-  position: relative;
+  top:0px;
+  left:0px;
+  width:calc(100% - var(--total-gutter-size));
+  height:100vh;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.background-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  flex-wrap: wrap;
+  padding: 3px;
+}
+
+.background-content {
+  text-align: left;
+  background-color: var(--color5);
+  border: 6px solid var(--color4);
+  border-radius: 3vw;
+  width: 45%;
+  min-width: 340px;
 }
