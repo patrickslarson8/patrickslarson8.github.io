@@ -239,19 +239,7 @@ navbar ul li a .icon {
   height: 100vh;
 }
 
-#about-section {
-  top:0px;
-  left:0px;
-  width:calc(100% - var(--total-gutter-size));
-  height:99.4vh;
-  background-color: var(--color3);
-  box-sizing: border-box;
-  text-align: center;
-  border-top: 1vh solid var(--color4);
-  border-bottom: 1vh solid var(--color4);
-  border-top-left-radius: 10vh;
-  border-bottom-left-radius: 10vh;
-}
+
 
 #about-section h2 {
   width: 100%;
@@ -312,7 +300,8 @@ navbar ul li a .icon {
   min-width: 340px;
 }
 
-#contact-me-section {
+
+.card-section {
   top:0px;
   left:0px;
   width:calc(100% - var(--total-gutter-size));
