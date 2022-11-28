@@ -141,6 +141,11 @@ navbar ul li a .icon {
   left:3px;
 }
 
+#contact-icon{
+  position: relative;
+  left:3px;
+}
+
 #nav-marker {
   position:absolute;
   top: 14px;
@@ -305,4 +310,18 @@ navbar ul li a .icon {
   border-radius: 3vw;
   width: 45%;
   min-width: 340px;
+}
+
+#contact-me-section {
+  top:0px;
+  left:0px;
+  width:calc(100% - var(--total-gutter-size));
+  height:99.4vh;
+  background-color: var(--color3);
+  box-sizing: border-box;
+  text-align: center;
+  border-top: 1vh solid var(--color4);
+  border-bottom: 1vh solid var(--color4);
+  border-top-left-radius: 10vh;
+  border-bottom-left-radius: 10vh;
 }

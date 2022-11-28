@@ -49,6 +49,7 @@ const observer = new IntersectionObserver(entries => {
         case "projects-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "74px";} break;
         case "about-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "135px";} break;
         case "background-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "193px";} break;
+        case "contact-me-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "255px";} break;
         default:
       }
     })
@@ -58,3 +59,4 @@ observer.observe(document.getElementById("intro"));
 observer.observe(document.getElementById("projects-section"));
 observer.observe(document.getElementById("about-section"));
 observer.observe(document.getElementById("background-section"));
+observer.observe(document.getElementById("contact-me-section"));
