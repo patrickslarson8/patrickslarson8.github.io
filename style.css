@@ -4,6 +4,7 @@
     --color3: #606c38;
     --color4: #dda15e;
     --color5: #bc6c25;
+
     --min-width: 300px;
     --transition-width: 500px;
 
@@ -13,7 +14,7 @@
     --navbar-gutter-size: calc(var(--navbar-offset)*2 + var(--navbar-width));
     --total-gutter-size: calc(var(--navbar-offset)*2 
                           + var(--navbar-width) 
-                          + var(--accent-stripe-width));
+                          + var(--accent-stripe-width));               
   }
 
 html {
@@ -24,53 +25,89 @@ body {
     background-color: var(--color1);
     margin:0px;
     overflow-x: hidden;
+    font-family: Verdana, sans-serif, tahoma;
 }
 
-#intro {
-  background-color: var(--color3);
-  position:relative;
-  width: 100%;
-  min-height:99.4vh;
+/*elements to make card effect*/
+.dark-section {
+  /*define box*/
   box-sizing: border-box;
-  min-width: var(--min-width);
-  display:flex;
-  z-index: 0;
+  width:calc(100% - var(--total-gutter-size));
+  min-height:100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+
+  /*define text*/
+  text-align: center;
+  background-color: var(--color3);
   border-top: 1vh solid var(--color4);
   border-bottom: 1vh solid var(--color4);
 }
 
-/* portion to left of portrait*/
-.left-block {
-  margin:auto;
-  text-align: center;
-  width:30vw;
-  height:30vh;
+.light-section {
+  /*define box*/
+  box-sizing: border-box;
+  width:calc(100% - var(--total-gutter-size));
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
   
+  /*define text*/
+  align-items: center;
+  text-align: center;
+  background-color: var(--color1);
+  border-top: 1vh solid var(--color5);
+  border-bottom: 1vh solid var(--color5);
 }
 
-.headline {
+
+h2 {
+    /*define box*/
+  height: 92px;
+  line-height: 92px;
+  border-radius: 10vh;
+  border-top-right-radius: 2vh;
+  outline: 6px solid var(--color4);
+
+    /*define text*/
+  padding-left:3vw;
+  padding-right:3vw;
+  font-size: 3em;
+  color: var(--color4);
+  background-color: var(--color3);
+}
+
+/* portion to left of portrait*/
+
+#intro {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#left-block {
+  box-sizing: border-box;
+  min-width: 356px;
+}
+
+#left-block h2{
+  font-variant: small-caps;
+  font-size: 36pt;
+}
+
+#left-block h3 {
   color: #dda15e;
   font-variant: small-caps;
-  text-align: left;
-  font-size: 36pt;
-  margin-bottom: 10px;
+  font-size: 18pt;
 }
 
-/* icons below headline*/
-#sm-div {
-  color:var(--color5);
-  outline: var(--color4);
-  margin:auto;
-  text-align: left;
-}
-
-.social-media a {
-  text-decoration: none;
-  color: var(--color4);
-  transition: all .3s;
-}
-.social-media a:hover {
-  color: var(--color5);
+/*resume link*/
+#left-block a {
+  color: #dda15e;
+  font-variant: small-caps;
+  font-size: 12pt;
 }
 
 .circle-portrait {
@@ -78,6 +115,23 @@ body {
   border-top-right-radius: 20%;
   margin:auto;
 }
+
+/* icons below headline*/
+#sm-div {
+  color:var(--color5);
+  outline: var(--color4);
+}
+
+#sm-div a {
+  text-decoration: none;
+  color: var(--color4);
+  transition: all .3s;
+}
+
+#sm-div a:hover {
+  color: var(--color5);
+}
+
 
 /* nav on right side */
 #right-stripe {
@@ -241,51 +295,3 @@ navbar ul li a .icon {
   min-width: 340px;
 }
 
-.dark-section {
-  /*define box*/
-  box-sizing: border-box;
-  width:calc(100% - var(--total-gutter-size));
-  min-height:100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  /*define text*/
-  text-align: center;
-  background-color: var(--color3);
-  border-top: 1vh solid var(--color4);
-  border-bottom: 1vh solid var(--color4);
-}
-
-.light-section {
-  /*define box*/
-  box-sizing: border-box;
-  width:calc(100% - var(--total-gutter-size));
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  
-  /*define text*/
-  align-items: center;
-  text-align: center;
-  background-color: var(--color1);
-  border-top: 1vh solid var(--color5);
-  border-bottom: 1vh solid var(--color5);
-}
-
-
-h2 {
-    /*define box*/
-  height: 10vw;
-  line-height: 10vw;
-  border-radius: 10vh;
-  border-top-right-radius: 2vh;
-  outline: 6px solid var(--color4);
-
-    /*define text*/
-  padding-left:3vw;
-  padding-right:3vw;
-  font-size: 3em;
-  color: var(--color4);
-  background-color: var(--color3);
-}
