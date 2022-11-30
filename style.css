@@ -68,17 +68,38 @@ h2 {
     /*define box*/
   height: 92px;
   line-height: 92px;
+  background-color: var(--color4);
   border-radius: 10vh;
   border-top-right-radius: 2vh;
-  outline: 6px solid var(--color4);
+  outline: 6px solid var(--color5);
 
     /*define text*/
   padding-left:3vw;
   padding-right:3vw;
   font-size: 3em;
-  color: var(--color4);
-  background-color: var(--color3);
+  color: var(--color3);
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:stretch;
+  flex-wrap: wrap;
+  padding: 3px;
+}
+
+.content-cell {
+  text-align: left;
+  background-color: var(--color4);
+  border: 6px solid var(--color5);
+  border-radius: 3vw;
+  width: 40%;
+  min-width: 340px;
+  padding: 1vw;
+  margin: 1vw;
+}
+
 
 /* portion to left of portrait*/
 
@@ -272,26 +293,4 @@ navbar ul li a .icon {
   outline:5px solid var(--color3);
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: stretch;
-  flex-wrap: wrap;
-  padding: 3px;
-}
-
-
-.about-me-subheader {
-  text-align: center;
-} 
-
-.content-cell {
-  text-align: left;
-  background-color: var(--color5);
-  border: 6px solid var(--color4);
-  border-radius: 3vw;
-  width: 45%;
-  min-width: 340px;
-}
 
