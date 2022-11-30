@@ -37,7 +37,7 @@
 
             <div id="projects-section" class="light-section">
                 <div id="project-title">
-                <h2>What I'm Proud Of</h2>
+                <h2>Portfolio</h2>
                     <div id="project-btn-div">
                         <button id="csharpbtn" class="btn">C# & .Net</button>
                         <button id="cppbtn" class="btn">C++</button>
@@ -199,27 +199,25 @@
             <div id="contact-me-section" class="dark-section">
                 <h2>Contact Me</h2>
                 <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                    <div class="form-row">
-                        <div class="control-group">
-                            <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                        <div class="control-group">
-                            <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email">
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject">
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="control-group">
-                        <textarea class="form-control" rows="5" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                        <p class="help-block text-danger"></p>
-                    </div>
-                    <div>
-                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                    </div>
+                    <!-- form row created with break element -->
+                    <input type="text" id="name" class="narrow-input" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name">
+                    <p class="help-block text-danger"></p>
+                    <input type="email" class="narrow-input" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email">
+                    <p class="help-block text-danger"></p>
+                
+                    <div class="break"></div>
+
+                    <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject">
+                    <p class="help-block text-danger"></p>
+
+                    <div class="break"></div>
+
+                    <textarea class="form-control" rows="5" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                    <p class="help-block text-danger"></p>
+
+                    <div class="break"></div>
+                    <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+
                 </form>
             </div>
 
