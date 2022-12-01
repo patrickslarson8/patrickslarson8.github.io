@@ -60,3 +60,39 @@ observer.observe(document.getElementById("projects-section"));
 observer.observe(document.getElementById("about-section"));
 observer.observe(document.getElementById("background-section"));
 observer.observe(document.getElementById("contact-me-section"));
+
+
+$('#contact-form').on('submit', function (t) {
+  t.preventDefault();
+  $(this).attr('action');
+  $('#form-submit').val('Wait...');
+  var o = $('#contact-name').val(),
+    a = $('#contact-email').val(),
+    e = $('#contact-message').val(),
+    n = 0;
+  $('.con-validate', this).each(function () {
+    '' == $(this).val()
+      ? ($(this).addClass('con-error'), (n += 1))
+      : $(this).hasClass('con-error') &&
+        ($(this).removeClass('con-error'), n > 0 && (n -= 1));
+  }),
+    0 === n
+      ? $.ajax({
+          type: 'POST',
+          url: 'mail.php',
+          data: { con_name: o, con_email: a, con_message: e },
+          success: function (t) {
+            $('#contact-form input, #contact-form textarea').val(''),
+              $('#contact-submit.primary-button span').html('Done!'),
+              $('#contact-submit.primary-button').addClass('ok'),
+              console.log(t);
+          },
+          error: function (t, o) {
+            $('#contact-submit.primary-button span').html('Failed!');
+          },
+        })
+      : console.log('Validation Error');
+}),
+$('.con-validate').keyup(function () {
+  $(this).removeClass('con-error');
+});

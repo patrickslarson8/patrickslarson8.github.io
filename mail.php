@@ -1,4 +1,4 @@
 <?php
-alert("Message")
+echo '<script>alert("Hello")</script>';
 // PHP code goes here
 ?>
