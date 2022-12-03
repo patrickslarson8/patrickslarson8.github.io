@@ -198,18 +198,18 @@
             <div id="contact-me-section" class="dark-section">
                 <h2>Contact Me</h2>
                 <form name="sentMessage" id="contactForm" novalidate="novalidate"
-                    method="post" action="mail.php">
+                    method="post" action="https://formspree.io/f/mnqreaaa">
                     <!-- form row created with break element -->
-                    <input type="text" id="name" name="name" class="narrow-input" placeholder="Your Name" 
+                    <!-- <input type="text" id="name" name="name" class="narrow-input" placeholder="Your Name" 
                         required="required" data-validation-required-message="Please enter your name">
-                    <p class="help-block text-danger"></p>
+                    <p class="help-block text-danger"></p> -->
                     <input type="email" class="narrow-input" id="email" name="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email">
                     <p class="help-block text-danger"></p>
                 
-                    <div class="break"></div>
+                    <!-- <div class="break"></div>
 
                     <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject">
-                    <p class="help-block text-danger"></p>
+                    <p class="help-block text-danger"></p> -->
 
                     <div class="break"></div>
 
@@ -218,8 +218,20 @@
 
                     <div class="break"></div>
                     <button class="btn" type="submit" name="submit" id="sendMessageButton">Send Message</button>
+                    <p id="form-status"></p>
 
                 </form>
+
+                <!-- modify this form HTML and place wherever you want your form -->
+                <!-- <form id="contactForm" action="https://formspree.io/f/mnqreaaa" method="POST">
+                    <label>Email:</label>
+                    <input type="email" name="email" />
+                    <label>Message:</label>
+                    <input type="text" name="message" />
+                    <button id="my-form-button">Submit</button>
+                    <p id="my-form-status"></p>
+                </form> -->
+
             </div>
 
 
