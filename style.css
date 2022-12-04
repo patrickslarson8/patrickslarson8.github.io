@@ -17,9 +17,9 @@
                           + var(--accent-stripe-width));               
   }
 
-html {
+/* html {
   scroll-behavior: smooth;
-}
+} */
 
 body {
     background-color: var(--color1);
@@ -99,7 +99,7 @@ h2 {
   min-width: 340px;
   padding: 1vw;
   margin: 1vw;
-  transition: 1s; 
+  transition: 0.3s; 
 }
 
 
@@ -242,7 +242,7 @@ navbar ul li a .icon {
   outline: 6px solid var(--color3);
   background-color: var(--color5);
   visibility: hidden;
-  transition: 1s;
+  transition: .3s;
 }
 
 
@@ -261,7 +261,7 @@ navbar ul li a .icon {
   border-radius:15px;
   border-top-right-radius: 5px;
   font-size: 1.6em;
-  transition: 1s;
+  transition: .3s;
 }
 
 .btn:hover {
@@ -280,7 +280,7 @@ navbar ul li a .icon {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  transition: 1s;
+  transition: .3s;
 }
 
 .content {
@@ -323,7 +323,7 @@ input, textarea, #form-status {
   border-top-right-radius: 5px;
   font-size: 1.6em;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  transition: 1s;
+  transition: .3s;
   flex-basis:80%;
   margin: 1vw;
   padding: 20px;

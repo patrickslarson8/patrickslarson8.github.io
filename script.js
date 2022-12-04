@@ -1,15 +1,9 @@
+
+// If javascript works then we can animate the nav bar
 var marker_style = document.getElementById("nav-marker").style;
 marker_style.visibility = "visible";
 
-var csharpbtn = document.getElementById("csharpbtn")
-var cppbtn = document.getElementById("cppbtn")
-var pythonbtn = document.getElementById("pythonbtn")
-var sqlbtn = document.getElementById("sqlbtn")
-
-csharpbtn.addEventListener("click", (event) => {filterSelection(event, "c-sharp")});
-cppbtn.addEventListener("click", (event) => {filterSelection(event, "cpp")});
-pythonbtn.addEventListener("click", (event) => {filterSelection(event, "python")});
-sqlbtn.addEventListener("click", (event) => {filterSelection(event, "sql")});
+// Code to highlight selected projects
 
 function filterSelection(event, term) {
     var contentCells, callingBtn, i;
@@ -36,21 +30,31 @@ function filterSelection(event, term) {
     }
 }
 
+// Attach previous functions to button
+var csharpbtn = document.getElementById("csharpbtn")
+var cppbtn = document.getElementById("cppbtn")
+var pythonbtn = document.getElementById("pythonbtn")
+var sqlbtn = document.getElementById("sqlbtn")
+
+csharpbtn.addEventListener("click", (event) => {filterSelection(event, "c-sharp")});
+cppbtn.addEventListener("click", (event) => {filterSelection(event, "cpp")});
+pythonbtn.addEventListener("click", (event) => {filterSelection(event, "python")});
+sqlbtn.addEventListener("click", (event) => {filterSelection(event, "sql")});
+
 // Make navbar follow along with scroll
 const options = {threshold:0.5};
 
-
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      const intersecting = entry.isIntersecting
+      const intersecting = entry.isIntersecting;
       switch (entry.target.id)
       {
         case "intro": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "15px";} break;
         case "projects-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "74px";} break;
-        case "about-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "135px";} break;
-        case "background-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "193px";} break;
+        case "about-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "135px";} console.log("scrolling about"); break;
+        case "background-header": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "193px";} console.log("scrolling background"); break;
         case "contact-me-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "255px";} break;
-        default:
+        default:;
       }
     })
   }, options);
@@ -58,7 +62,7 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(document.getElementById("intro"));
 observer.observe(document.getElementById("projects-section"));
 observer.observe(document.getElementById("about-section"));
-observer.observe(document.getElementById("background-section"));
+observer.observe(document.getElementById("background-header"));
 observer.observe(document.getElementById("contact-me-section"));
 
 
@@ -75,22 +79,35 @@ async function handleSubmit(event) {
     headers: {
         'Accept': 'application/json'
     }
+
+  // No matter what happens display a message to the user
+  // Input desired text then adjust opacity
   }).then(response => {
     if (response.ok) {
       status.innerHTML = "Thanks for your submission!";
       status.style.opacity = "1";
       form.reset()
+    
+    // Display error messages
     } else {
       response.json().then(data => {
         if (Object.hasOwn(data, 'errors')) {
           status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          status.style.opacity = "1";
+
         } else {
           status.innerHTML = "Oops! There was a problem submitting your form"
+          status.style.opacity = "1";
         }
       })
     }
   }).catch(error => {
     status.innerHTML = "Oops! There was a problem submitting your form"
+    status.style.opacity = "1";
   });
+
+  //After a short period fade status message away
+  await new Promise(r => setTimeout(r, 3000));
+  status.style.opacity = "0";
 }
 form.addEventListener("submit", handleSubmit)
