@@ -315,7 +315,7 @@ form {
   height: 0px;
 }
 
-input, textarea {
+input, textarea, #form-status {
   color: var(--color2);
   background-color: var(--color4);
   border:3px solid var(--color5);
@@ -336,4 +336,11 @@ input, textarea {
 input:hover, textarea:hover {
   background-color: var(--color5);
   resize: none;
+}
+
+#form-status {
+  position: absolute;
+  margin-top: 6vh;
+  transition: 0.3s;
+  opacity: 0;
 }
