@@ -46,11 +46,13 @@ var csharpbtn = document.getElementById("csharpbtn")
 var cppbtn = document.getElementById("cppbtn")
 var pythonbtn = document.getElementById("pythonbtn")
 var sqlbtn = document.getElementById("sqlbtn")
+var htmlbtn = document.getElementById("htmlbtn")
 
 csharpbtn.addEventListener("click", (event) => {filterSelection(event, "c-sharp")});
 cppbtn.addEventListener("click", (event) => {filterSelection(event, "cpp")});
 pythonbtn.addEventListener("click", (event) => {filterSelection(event, "python")});
 sqlbtn.addEventListener("click", (event) => {filterSelection(event, "sql")});
+htmlbtn.addEventListener("click", (event) => {filterSelection(event, "html")});
 
 // Make navbar follow along with scroll
 const options = {threshold:0.5};
