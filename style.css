@@ -366,6 +366,10 @@ input:hover, textarea:hover {
   opacity: 0;
 }
 
+.value-item {
+  text-align: center;
+}
+
 @media only screen and (max-width: 700px) {
   body {
     width: 100%;
