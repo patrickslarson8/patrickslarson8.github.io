@@ -1,7 +1,19 @@
 
 // If javascript works then we can animate the nav bar
 var marker_style = document.getElementById("nav-marker").style;
-marker_style.visibility = "visible";
+
+function myFunction(x) {
+  console.log("java resive func called");
+  if (x.matches) { // If media query matches
+    marker_style.visibility = "hidden";
+  }
+  else {
+    marker_style.visibility = "visible";
+  }
+}
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x) // Call listener function at run time
+x.addEventListener('change', myFunction) // Attach listener function on state changes
 
 // Code to highlight selected projects
 
@@ -110,4 +122,4 @@ async function handleSubmit(event) {
   await new Promise(r => setTimeout(r, 3000));
   status.style.opacity = "0";
 }
-form.addEventListener("submit", handleSubmit)
+form.addEventListener("submit", handleSubmit);
