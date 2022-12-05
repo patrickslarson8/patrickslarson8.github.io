@@ -293,14 +293,17 @@ navbar ul li a .icon {
   transition: all .3s;
   border:3px solid var(--color4);
   box-shadow: 5px 5px 5px var(--color2);
+  opacity: 1;
+  overflow:hidden;
 }
 
 .content:hover {
   background-color: var(--color4);
 }
 
-.content-active {
-  outline:5px solid var(--color3);
+.content-hide {
+  opacity: 0.5;
+  height:0;
 }
 
 #projects-section a {

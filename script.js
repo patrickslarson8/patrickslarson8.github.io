@@ -15,31 +15,30 @@ var x = window.matchMedia("(max-width: 700px)")
 myFunction(x) // Call listener function at run time
 x.addEventListener('change', myFunction) // Attach listener function on state changes
 
-// Code to highlight selected projects
 
+// Code to highlight selected projects
 function filterSelection(event, term) {
     var contentCells, callingBtn, i;
     callingBtn = event.target;
     contentCells = document.getElementsByClassName("content");
 
     if(callingBtn.classList.contains("btn-active")) {
-        console.log("deactivating button");
         callingBtn.classList.remove("btn-active");
         for (i = 0; i < contentCells.length; i++) {
-            if (contentCells[i].classList.contains(term)) {
-              contentCells[i].classList.remove("content-active");
+            if (!contentCells[i].classList.contains(term)) {
+              contentCells[i].classList.remove("content-hide");
             }
           }
     }
     else {
-        console.log("activating button");
         callingBtn.classList.add("btn-active");
         for (i = 0; i < contentCells.length; i++) {
-            if (contentCells[i].classList.contains(term)) {
-            contentCells[i].classList.add("content-active");
+            if (!contentCells[i].classList.contains(term)) {
+            contentCells[i].classList.add("content-hide");
             }
         }
     }
+
 }
 
 // Attach previous functions to button
