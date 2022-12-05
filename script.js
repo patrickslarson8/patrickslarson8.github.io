@@ -63,8 +63,8 @@ const observer = new IntersectionObserver(entries => {
       {
         case "intro": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "15px";} break;
         case "projects-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "74px";} break;
-        case "about-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "135px";} console.log("scrolling about"); break;
-        case "background-header": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "193px";} console.log("scrolling background"); break;
+        case "about-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "135px";} break;
+        case "background-header": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "193px";}  break;
         case "contact-me-section": if(entry.intersectionRatio >= options.threshold) {marker_style.top = "255px";} break;
         default:;
       }

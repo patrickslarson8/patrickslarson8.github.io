@@ -298,7 +298,7 @@ navbar ul li a .icon {
   outline:5px solid var(--color3);
 }
 
-#projects-section a {
+#projects-section a p {
     text-decoration: none;
     color: black;
 }
