@@ -279,9 +279,8 @@ navbar ul li a .icon {
 }
 
 .content {
-  width: 15vw;
-  min-width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   background-color: var(--color5);
   border-radius: 50%;
   border-top-right-radius: 15px;
@@ -298,9 +297,19 @@ navbar ul li a .icon {
   outline:5px solid var(--color3);
 }
 
-#projects-section a p {
+#projects-section a {
     text-decoration: none;
     color: black;
+}
+
+#projects-section a:link {
+  text-decoration: none;
+  color: black;
+}
+
+#projects-section a:visited {
+  text-decoration: none;
+  color: black;
 }
 
 /* Contact me form styling */
