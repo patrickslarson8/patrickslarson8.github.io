@@ -2,8 +2,8 @@
 // If javascript works then we can animate the nav bar
 var marker_style = document.getElementById("nav-marker").style;
 
+// Manage the size of the webpage
 function myFunction(x) {
-  console.log("java resive func called");
   if (x.matches) { // If media query matches
     marker_style.visibility = "hidden";
   }
@@ -18,27 +18,56 @@ x.addEventListener('change', myFunction) // Attach listener function on state ch
 
 // Code to highlight selected projects
 function filterSelection(event, term) {
-    var contentCells, callingBtn, i;
+    var contentCells, callingBtn, i, filterActivated;
     callingBtn = event.target;
     contentCells = document.getElementsByClassName("content");
+    filterButtons = document.getElementsByClassName("filter-btn");
+    filterActivated = false;
 
-    if(callingBtn.classList.contains("btn-active")) {
-        callingBtn.classList.remove("btn-active");
+    // Handle button toggle behavior
+    // so only one can be active at a time
+    if(!callingBtn.classList.contains("btn-active")){
+      for (i = 0; i < filterButtons.length; i++) {
+        if (filterButtons[i].classList.contains("btn-active")) {
+          filterButtons[i].classList.remove("btn-active");
+        } 
+      }
+      callingBtn.classList.add("btn-active");
+    }
+    else{
+      callingBtn.classList.remove("btn-active");
+    }
+    
+
+    // hide all elements to only show desired ones
+    for (i = 0; i < contentCells.length; i++) {
+      if (contentCells[i].classList.contains("content-show")) {
+      contentCells[i].classList.remove("content-show");
+      }
+    }
+
+    // everytime figure out all buttons that are active
+    for (i = 0; i < filterButtons.length; i++) {
+      if(filterButtons[i].classList.contains("btn-active")){
+        filterActivated = true;
+
+        // For active filters show those cells
         for (i = 0; i < contentCells.length; i++) {
-            if (!contentCells[i].classList.contains(term)) {
-              contentCells[i].classList.remove("content-hide");
-            }
+          if (contentCells[i].classList.contains(term)) {
+          contentCells[i].classList.add("content-show");
           }
-    }
-    else {
-        callingBtn.classList.add("btn-active");
-        for (i = 0; i < contentCells.length; i++) {
-            if (!contentCells[i].classList.contains(term)) {
-            contentCells[i].classList.add("content-hide");
-            }
         }
+      }
     }
 
+    // if none are active then show all projects
+    if(!filterActivated){
+      for (i = 0; i < contentCells.length; i++) {
+        if (!contentCells[i].classList.contains("content-show")) {
+        contentCells[i].classList.add("content-show");
+        }
+      }
+    }
 }
 
 // Attach previous functions to button
@@ -55,7 +84,7 @@ sqlbtn.addEventListener("click", (event) => {filterSelection(event, "sql")});
 htmlbtn.addEventListener("click", (event) => {filterSelection(event, "html")});
 
 // Make navbar follow along with scroll
-const options = {threshold:0.5};
+const options = {threshold:0.1};
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
