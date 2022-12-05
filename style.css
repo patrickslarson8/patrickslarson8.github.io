@@ -348,6 +348,7 @@ input, textarea, #form-status {
   flex-basis:80%;
   margin: 1vw;
   padding: 20px;
+  box-shadow: 5px 5px 5px var(--color2);
 }
 
 .narrow-input{
