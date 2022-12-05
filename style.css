@@ -92,6 +92,7 @@ h2 {
 }
 
 .content-cell {
+
   text-align: left;
   background-color: var(--color4);
   border: 6px solid var(--color5);
@@ -101,8 +102,8 @@ h2 {
   padding: 1vw;
   margin: 1vw;
   transition: 0.3s; 
+  box-shadow: 5px 5px 5px var(--color2);
 }
-
 
 /* portion to left of portrait*/
 
@@ -251,6 +252,7 @@ navbar ul li a .icon {
 
 .btn {
   color: var(--color2);
+  
   background-color: var(--color4);
   border-color: var(--color2);
   border-radius:15px;
@@ -279,6 +281,9 @@ navbar ul li a .icon {
 }
 
 .content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 250px;
   height: 250px;
   background-color: var(--color5);
@@ -287,6 +292,7 @@ navbar ul li a .icon {
   margin: 10px;
   transition: all .3s;
   border:3px solid var(--color4);
+  box-shadow: 5px 5px 5px var(--color2);
 }
 
 .content:hover {
